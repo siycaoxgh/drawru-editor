@@ -165,6 +165,3 @@ const THEME = {
 
 打开 `tests/test.html` 运行单元测试。
 
-## License
-
-MIT
