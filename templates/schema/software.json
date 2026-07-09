@@ -1,0 +1,12 @@
+{
+    "name": "software",
+    "fields": [
+        { "key": "软件名称", "placeholder": "请输入软件名称", "required": true },
+        { "key": "软件大小", "placeholder": "如：10MB", "required": false },
+        { "key": "软件版本", "placeholder": "如：V1.0", "required": false },
+        { "key": "更新日期", "placeholder": "如：2026/01/01", "required": false, "default": "2026/01/01" },
+        { "key": "适配平台", "placeholder": "选择平台", "required": false, "type": "select", "options": ["Windows", "macOS", "Linux", "Windows / macOS", "全平台"] },
+        { "key": "官网链接", "placeholder": "https://...", "required": false },
+        { "key": "软件截图", "placeholder": "https://...", "required": false, "type": "image" }
+    ]
+}

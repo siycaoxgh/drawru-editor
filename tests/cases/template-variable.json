@@ -1,0 +1,18 @@
+{
+    "name": "模板变量测试",
+    "category": "template",
+    "description": "测试 generateWithFields 方法",
+    "input": {
+        "templateName": "software"
+    },
+    "expected": {
+        "contains": [
+            "<!-- 字段提示",
+            "软件名称",
+            "[必填]",
+            "软件大小",
+            "[选填]"
+        ],
+        "notContains": []
+    }
+}

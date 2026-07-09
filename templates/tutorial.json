@@ -1,0 +1,50 @@
+{
+    "name": "教程指南",
+    "description": "教程类文章模板",
+    "sections": [
+        {
+            "type": "title",
+            "title": "教程简介",
+            "content": ""
+        },
+        {
+            "type": "list",
+            "title": "前置要求",
+            "items": [
+                "要求一",
+                "要求二",
+                "要求三"
+            ]
+        },
+        {
+            "type": "title",
+            "title": "第一步",
+            "content": ""
+        },
+        {
+            "type": "image",
+            "title": "示意图",
+            "placeholder": "https://example.com/step1.jpg"
+        },
+        {
+            "type": "title",
+            "title": "第二步",
+            "content": ""
+        },
+        {
+            "type": "image",
+            "title": "示意图",
+            "placeholder": "https://example.com/step2.jpg"
+        },
+        {
+            "type": "title",
+            "title": "常见问题",
+            "content": ""
+        },
+        {
+            "type": "quote",
+            "title": "FAQ",
+            "content": ""
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "name": "边缘情况测试",
+    "category": "edge",
+    "input": "01\n【测试标题】\n\n空行测试：\n\n\n\n多个连续空行\n\n特殊字符测试：\n\n链接：https://example.com\n邮箱：test@example.com\n\n代码行：\n\n空格开头\n\n结尾空格\n\nemoji：🎉✅❌"
+}

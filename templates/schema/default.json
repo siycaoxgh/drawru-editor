@@ -1,0 +1,10 @@
+{
+    "name": "default",
+    "fields": [
+        { "key": "文章标题", "placeholder": "请输入文章标题", "required": true },
+        { "key": "作者", "placeholder": "请输入作者名称", "required": false },
+        { "key": "发布日期", "placeholder": "如：2026年1月1日", "required": false, "default": "2026年" },
+        { "key": "封面图", "placeholder": "https://...", "required": false, "type": "image" },
+        { "key": "摘要", "placeholder": "简要描述文章内容", "required": false, "type": "textarea" }
+    ]
+}

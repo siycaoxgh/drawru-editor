@@ -1,0 +1,45 @@
+{
+    "name": "旅行攻略",
+    "description": "旅行分享模板",
+    "sections": [
+        {
+            "type": "title",
+            "title": "目的地简介",
+            "content": ""
+        },
+        {
+            "type": "image",
+            "title": "风景图",
+            "placeholder": "https://example.com/cover.jpg"
+        },
+        {
+            "type": "title",
+            "title": "行程安排",
+            "content": ""
+        },
+        {
+            "type": "list",
+            "title": "推荐路线",
+            "items": [
+                "**Day 1：** 行程",
+                "**Day 2：** 行程",
+                "**Day 3：** 行程"
+            ]
+        },
+        {
+            "type": "title",
+            "title": "美食推荐",
+            "content": ""
+        },
+        {
+            "type": "quote",
+            "title": "必吃榜单",
+            "content": ""
+        },
+        {
+            "type": "title",
+            "title": "注意事项",
+            "content": ""
+        }
+    ]
+}

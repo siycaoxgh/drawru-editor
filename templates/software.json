@@ -1,0 +1,46 @@
+{
+    "name": "软件分享",
+    "description": "5 段式软件推荐模板",
+    "sections": [
+        {
+            "type": "title",
+            "title": "软件概览",
+            "content": {
+                "软件名称": "",
+                "软件大小": "",
+                "软件版本": "",
+                "更新日期": "",
+                "适配平台": ""
+            }
+        },
+        {
+            "type": "image",
+            "title": "软件截图",
+            "placeholder": "https://example.com/screenshot.jpg"
+        },
+        {
+            "type": "title",
+            "title": "功能介绍",
+            "content": ""
+        },
+        {
+            "type": "quote",
+            "title": "核心特点",
+            "content": ""
+        },
+        {
+            "type": "list",
+            "title": "使用说明",
+            "items": [
+                "**步骤一：** 说明",
+                "**步骤二：** 说明",
+                "**步骤三：** 说明"
+            ]
+        },
+        {
+            "type": "title",
+            "title": "下载方式",
+            "content": ""
+        }
+    ]
+}

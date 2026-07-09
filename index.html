@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrawRu 编辑器</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <div class="logo-icon">✦</div>
+            <span>DrawRu 编辑器</span>
+        </div>
+        <div class="top-actions">
+            <button class="btn btn-white" onclick="clearAll()">⟳ 清空</button>
+            <button class="btn btn-primary" onclick="applyTemplate()">✨ 应用模板</button>
+        </div>
+    </div>
+    
+    <div class="main">
+        <!-- 左侧：表单填写区 -->
+        <div class="column col-form">
+            <div class="column-header">
+                <div class="column-title">
+                    <div class="column-icon icon-form">📋</div>
+                    内容填写
+                </div>
+                <div class="template-switch">
+                    <button class="switch-btn active" id="switch-form" onclick="switchToForm()">表单</button>
+                    <button class="switch-btn" id="switch-md" onclick="switchToMd()">Markdown</button>
+                </div>
+            </div>
+            <div class="form-area" id="form-area">
+                <div id="form-container">
+                    <p class="form-placeholder">请先选择模板</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 中间：Markdown 编辑区 -->
+        <div class="column col-input" id="md-panel">
+            <div class="column-header">
+                <div class="column-title">
+                    <div class="column-icon icon-input">📝</div>
+                    Markdown 源码
+                </div>
+            </div>
+            <div class="input-area">
+                <textarea id="editor" placeholder="在这里输入内容..."></textarea>
+            </div>
+        </div>
+        
+        <!-- 右侧：预览 -->
+        <div class="column col-preview">
+            <div class="column-header">
+                <div class="column-title">
+                    <div class="column-icon icon-preview">📱</div>
+                    微信预览
+                </div>
+            </div>
+            <div class="preview-frame">
+                <div class="phone-mockup">
+                    <div class="phone-content" id="preview">
+                        <p style="color: #999; text-align: center; padding: 60px 0;">
+                            选择模板并填写内容后<br>点击「应用模板」查看效果
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="copy-float" id="copyBtn" onclick="copyToClipboardHandler()">
+        📋 复制到剪贴板
+    </button>
+    
+    <div class="toast" id="toast"></div>
+
+    <!-- 脚本加载顺序很重要 -->
+    <!-- 1. 配置 -->
+    <script src="js/config.js"></script>
+    
+    <!-- 2. 主题 -->
+    <script src="themes/default.js"></script>
+    
+    <!-- 3. SVG 资源库 -->
+    <script src="components/assets.js"></script>
+    
+    <!-- 4. 组件 -->
+    <script src="components/title.js"></script>
+    <script src="components/paragraph.js"></script>
+    <script src="components/image.js"></script>
+    <script src="components/quote.js"></script>
+    <script src="components/info.js"></script>
+    <script src="components/divider.js"></script>
+    <script src="components/footer.js"></script>
+    
+    <!-- 5. 核心模块 -->
+    <script src="js/clipboard.js"></script>
+    <script src="js/parser.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/form.js"></script>
+    
+    <!-- 6. 主应用 -->
+    <script src="js/app.js"></script>
+</body>
+</html>

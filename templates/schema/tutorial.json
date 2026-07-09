@@ -1,0 +1,13 @@
+{
+    "name": "tutorial",
+    "fields": [
+        { "key": "教程名称", "placeholder": "请输入教程名称", "required": true },
+        { "key": "教程简介", "placeholder": "简要描述教程内容", "required": true, "type": "textarea" },
+        { "key": "难度等级", "placeholder": "选择难度", "required": false, "type": "select", "options": ["初级", "中级", "高级"] },
+        { "key": "预计时长", "placeholder": "如：30分钟", "required": false },
+        { "key": "前置要求", "placeholder": "需要安装XXX", "required": false, "type": "textarea" },
+        { "key": "封面图", "placeholder": "https://...", "required": false, "type": "image" },
+        { "key": "步骤图1", "placeholder": "https://...", "required": false, "type": "image" },
+        { "key": "步骤图2", "placeholder": "https://...", "required": false, "type": "image" }
+    ]
+}

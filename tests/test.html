@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrawRu 编辑器 - 测试用例</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .test { margin: 20px 0; padding: 16px; border: 1px solid #ddd; border-radius: 8px; }
+        .test h3 { margin-top: 0; }
+        .test button { padding: 8px 16px; cursor: pointer; }
+        .result { margin-top: 10px; padding: 12px; background: #f5f5f5; border-radius: 4px; font-size: 13px; }
+        .pass { color: green; }
+        .fail { color: red; }
+        #console { background: #1e1e1e; color: #0f0; padding: 16px; border-radius: 8px; font-family: monospace; font-size: 12px; max-height: 300px; overflow-y: auto; }
+    </style>
+</head>
+<body>
+    <h1>🧪 DrawRu 编辑器 - 测试用例</h1>
+    
+    <div class="test">
+        <h3>测试 1: Parser - 解析章节标题</h3>
+        <button onclick="runTest1()">运行测试</button>
+        <div class="result" id="result1"></div>
+    </div>
+    
+    <div class="test">
+        <h3>测试 2: Parser - 解析图片</h3>
+        <button onclick="runTest2()">运行测试</button>
+        <div class="result" id="result2"></div>
+    </div>
+    
+    <div class="test">
+        <h3>测试 3: Renderer - 生成 HTML</h3>
+        <button onclick="runTest3()">运行测试</button>
+        <div class="result" id="result3"></div>
+    </div>
+    
+    <div class="test">
+        <h3>测试 4: Clipboard - 复制功能</h3>
+        <button onclick="runTest4()">运行测试</button>
+        <div class="result" id="result4"></div>
+    </div>
+    
+    <div class="test">
+        <h3>测试 5: 完整流程</h3>
+        <button onclick="runTest5()">运行测试</button>
+        <div class="result" id="result5"></div>
+    </div>
+    
+    <div class="test">
+        <h3>控制台输出</h3>
+        <div id="console"></div>
+    </div>
+
+    <!-- 加载核心模块 -->
+    <script src="../js/config.js"></script>
+    <script src="../themes/default.js"></script>
+    <script src="../components/assets.js"></script>
+    <script src="../components/title.js"></script>
+    <script src="../components/paragraph.js"></script>
+    <script src="../components/image.js"></script>
+    <script src="../components/quote.js"></script>
+    <script src="../components/info.js"></script>
+    <script src="../components/divider.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../js/clipboard.js"></script>
+    <script src="../js/parser.js"></script>
+    <script src="../js/renderer.js"></script>
+
+    <script>
+        const consoleEl = document.getElementById('console');
+        
+        function log(msg) {
+            consoleEl.innerHTML += msg + '\n';
+            consoleEl.scrollTop = consoleEl.scrollHeight;
+        }
+        
+        function clearLog() {
+            consoleEl.innerHTML = '';
+        }
+        
+        // 测试 1: Parser - 章节标题
+        function runTest1() {
+            clearLog();
+            const input = `01
+【软件概览】
+软件名称：TestApp`;
+            log('输入: ' + JSON.stringify(input));
+            
+            const nodes = parseMarkdown(input);
+            log('解析节点数: ' + nodes.length);
+            log('第一个节点类型: ' + nodes[0].type);
+            log('第一个节点编号: ' + nodes[0].num);
+            
+            const pass = nodes[0].type === 'title' && nodes[0].num === '01';
+            document.getElementById('result1').innerHTML = pass 
+                ? '<span class="pass">✅ 通过</span>' 
+                : '<span class="fail">❌ 失败</span>';
+        }
+        
+        // 测试 2: Parser - 图片
+        function runTest2() {
+            const input = '![封面图](https://example.com/image.jpg)';
+            const nodes = parseMarkdown(input);
+            
+            const pass = nodes[0].type === 'image' && 
+                        nodes[0].alt === '封面图' && 
+                        nodes[0].src === 'https://example.com/image.jpg';
+            
+            document.getElementById('result2').innerHTML = pass 
+                ? '<span class="pass">✅ 通过</span>' 
+                : '<span class="fail">❌ 失败</span>';
+        }
+        
+        // 测试 3: Renderer - 生成 HTML
+        function runTest3() {
+            const nodes = [
+                { type: 'paragraph', text: '测试段落' }
+            ];
+            
+            const renderer = new MarkdownRenderer(THEME);
+            const html = renderer.renderNodes(nodes);
+            
+            const pass = html.includes('<section') && html.includes('测试段落');
+            document.getElementById('result3').innerHTML = pass 
+                ? '<span class="pass">✅ 通过</span>' 
+                : '<span class="fail">❌ 失败</span>';
+        }
+        
+        // 测试 4: Clipboard API 可用性
+        async function runTest4() {
+            const pass = typeof ClipboardItem !== 'undefined' && 
+                        typeof navigator.clipboard !== 'undefined';
+            
+            document.getElementById('result4').innerHTML = pass 
+                ? '<span class="pass">✅ Clipboard API 可用</span>' 
+                : '<span class="fail">❌ Clipboard API 不可用</span>';
+        }
+        
+        // 测试 5: 完整流程
+        function runTest5() {
+            const input = `01
+【测试标题】
+这是测试内容
+
+![图片](https://example.com/test.jpg)`;
+            
+            const nodes = parseMarkdown(input);
+            const renderer = new MarkdownRenderer(THEME);
+            const html = renderer.renderArticle(nodes);
+            
+            const checks = {
+                'section标签': html.includes('<section'),
+                'background: transparent': html.includes('background: transparent'),
+                '章节编号': html.includes('01'),
+                '小标题': html.includes('测试标题'),
+                '图片': html.includes('<img'),
+                '根容器': html.includes('background-color: transparent !important')
+            };
+            
+            let result = '<ul>';
+            let allPass = true;
+            for (const [name, pass] of Object.entries(checks)) {
+                result += `<li>${pass ? '✅' : '❌'} ${name}</li>`;
+                if (!pass) allPass = false;
+            }
+            result += '</ul>';
+            
+            document.getElementById('result5').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

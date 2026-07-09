@@ -1,0 +1,31 @@
+{
+    "name": "通用文章",
+    "description": "适用于各类文章的通用模板",
+    "sections": [
+        {
+            "type": "title",
+            "title": "开篇",
+            "content": ""
+        },
+        {
+            "type": "paragraph",
+            "title": "主要内容",
+            "content": ""
+        },
+        {
+            "type": "title",
+            "title": "深入讲解",
+            "content": ""
+        },
+        {
+            "type": "paragraph",
+            "title": "详细说明",
+            "content": ""
+        },
+        {
+            "type": "quote",
+            "title": "总结",
+            "content": ""
+        }
+    ]
+}

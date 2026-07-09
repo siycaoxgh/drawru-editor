@@ -1,0 +1,13 @@
+{
+    "name": "travel",
+    "fields": [
+        { "key": "目的地", "placeholder": "请输入目的地名称", "required": true },
+        { "key": "旅行时间", "placeholder": "如：2026年春节期间", "required": false },
+        { "key": "旅行天数", "placeholder": "如：3天2晚", "required": false },
+        { "key": "人均费用", "placeholder": "如：3000元", "required": false },
+        { "key": "最佳季节", "placeholder": "选择季节", "required": false, "type": "select", "options": ["春季", "夏季", "秋季", "冬季", "全年皆宜"] },
+        { "key": "封面图", "placeholder": "https://...", "required": false, "type": "image" },
+        { "key": "风景图1", "placeholder": "https://...", "required": false, "type": "image" },
+        { "key": "美食图", "placeholder": "https://...", "required": false, "type": "image" }
+    ]
+}

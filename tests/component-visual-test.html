@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrawRu v3.5.1 视觉测试</title>
+    <link href="https://at.alicdn.com/t/font_1234567.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            border-bottom: 2px solid #ffbd4a;
+            padding-bottom: 10px;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .test-title {
+            color: #ffbd4a;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border-left: 3px solid #ffbd4a;
+            padding-left: 8px;
+        }
+        .compare-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .compare-box {
+            border: 1px dashed #ccc;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .compare-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .xiumi-box {
+            background: #fff9e6;
+        }
+        .drawru-box {
+            background: #e6f3ff;
+        }
+        #preview {
+            border: 1px solid #ddd;
+            min-height: 300px;
+            padding: 20px;
+        }
+        .params {
+            font-size: 12px;
+            color: #666;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .params code {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin: 2px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>DrawRu v3.5.1 组件视觉测试</h1>
+    
+    <div class="test-section">
+        <div class="test-title">组件加载状态</div>
+        <div id="status">加载中...</div>
+    </div>
+    
+    <div class="test-section">
+        <div class="test-title">1. 章节标题 (Title)</div>
+        <div class="compare-row">
+            <div class="compare-box xiumi-box">
+                <div class="compare-label">秀米原始效果</div>
+                <section style="display: flex; flex-flow: row; margin: 10px 0% 2px;">
+                    <section style="display: inline-block; vertical-align: bottom; width: auto; padding: 0px 2px;">
+                        <span style="font-size: 24px; font-weight: bold; color: rgb(255, 189, 74); text-decoration: underline;">01</span>
+                    </section>
+                    <section style="display: inline-block; vertical-align: bottom; flex: 100 100 0%;">
+                        <br>
+                    </section>
+                </section>
+                <div style="margin: 0.5em 0px;">
+                    <span style="display: inline-block; width: 6px; height: 6px; background: rgb(175, 207, 238); border-radius: 100%;"></span>
+                    <span style="display: inline-block; width: 100%; margin: 0 -6px 0 -7px; border-bottom: 2px dotted rgb(175, 207, 238);"></span>
+                    <span style="display: inline-block; width: 6px; height: 6px; background: rgb(175, 207, 238); border-radius: 100%;"></span>
+                </div>
+                <section style="font-size: 18px; color: rgb(255, 189, 74);">【软件概览】</section>
+            </div>
+            <div class="compare-box drawru-box">
+                <div class="compare-label">DrawRu 渲染效果</div>
+                <div id="title-preview">等待渲染...</div>
+            </div>
+        </div>
+        <div class="params" id="title-params"></div>
+    </div>
+    
+    <div class="test-section">
+        <div class="test-title">2. 三色分隔线 (Divider)</div>
+        <div class="compare-row">
+            <div class="compare-box xiumi-box">
+                <div class="compare-label">秀米原始效果</div>
+                <div style="display: flex; align-items: center; justify-content: center; margin: 10px 0;">
+                    <span style="flex: 1; border-top: 1px dashed rgb(175, 207, 238);"></span>
+                    <span style="width: 10px; height: 10px; background: rgb(68, 217, 230); border-radius: 95px; margin: 0 8px;"></span>
+                    <span style="flex: 1; border-top: 1px dashed rgb(175, 207, 238);"></span>
+                    <span style="width: 10px; height: 10px; background: rgb(255, 189, 74); border-radius: 95px; margin: 0 8px;"></span>
+                    <span style="flex: 1; border-top: 1px dashed rgb(175, 207, 238);"></span>
+                    <span style="width: 10px; height: 10px; background: rgb(46, 179, 255); border-radius: 95px; margin: 0 8px;"></span>
+                    <span style="flex: 1; border-top: 1px dashed rgb(175, 207, 238);"></span>
+                </div>
+            </div>
+            <div class="compare-box drawru-box">
+                <div class="compare-label">DrawRu 渲染效果</div>
+                <div id="divider-preview">等待渲染...</div>
+            </div>
+        </div>
+        <div class="params" id="divider-params"></div>
+    </div>
+    
+    <div class="test-section">
+        <div class="test-title">3. 图片 (Image)</div>
+        <div class="compare-row">
+            <div class="compare-box xiumi-box">
+                <div class="compare-label">秀米原始效果</div>
+                <section style="margin: 10px 0; border: 2px dotted rgb(175, 207, 238); border-radius: 10px; text-align: center; overflow: hidden;">
+                    <img src="https://via.placeholder.com/600x200/afcfee/3e3e3e?text=Xiumi+Image" style="max-width: 100%; display: block;">
+                </section>
+            </div>
+            <div class="compare-box drawru-box">
+                <div class="compare-label">DrawRu 渲染效果</div>
+                <div id="image-preview">等待渲染...</div>
+            </div>
+        </div>
+        <div class="params" id="image-params"></div>
+    </div>
+    
+    <div class="test-section">
+        <div class="test-title">4. 段落 (Paragraph)</div>
+        <div class="compare-row">
+            <div class="compare-box xiumi-box">
+                <div class="compare-label">秀米原始效果</div>
+                <p style="font-size: 16px; line-height: 1.6; color: rgb(62, 62, 62); margin: 0px 0px 16px;">
+                    TrafficMonitor 是一款运行在 Windows 平台上的<strong style="color: rgb(255, 189, 74);">极简开源</strong>实时监控工具。
+                </p>
+                <p style="font-size: 16px; line-height: 1.6; color: rgb(62, 62, 62); margin: 0px 0px 16px;">
+                    它主要用于在桌面上、任务栏中实时显示<strong style="color: rgb(255, 189, 74);">网速</strong>、CPU 利用率、内存占用等关键系统信息。
+                </p>
+            </div>
+            <div class="compare-box drawru-box">
+                <div class="compare-label">DrawRu 渲染效果</div>
+                <div id="paragraph-preview">等待渲染...</div>
+            </div>
+        </div>
+        <div class="params" id="paragraph-params"></div>
+    </div>
+    
+    <div class="test-section">
+        <div class="test-title">5. END 区域</div>
+        <div class="compare-row">
+            <div class="compare-box xiumi-box">
+                <div class="compare-label">秀米原始效果</div>
+                <div style="text-align: center;">
+                    <span style="display: inline-block; width: 40%; border-top: 1px dotted rgb(175, 207, 238); margin: 14px 0;"></span>
+                    <span style="display: inline-block; width: 20%; color: rgb(175, 207, 238); font-size: 18px;">END</span>
+                    <span style="display: inline-block; width: 40%; border-top: 1px dotted rgb(175, 207, 238); margin: 14px 0;"></span>
+                </div>
+            </div>
+            <div class="compare-box drawru-box">
+                <div class="compare-label">DrawRu 渲染效果</div>
+                <div id="footer-preview">等待渲染...</div>
+            </div>
+        </div>
+        <div class="params" id="footer-params"></div>
+    </div>
+    
+    <div class="test-section">
+        <div class="test-title">完整文章预览</div>
+        <div id="preview">等待渲染...</div>
+    </div>
+    
+    <script src="themes/default.js"></script>
+    <script src="layouts/core.js"></script>
+    <script src="components/title.js"></script>
+    <script src="components/divider.js"></script>
+    <script src="components/image.js"></script>
+    <script src="components/paragraph.js"></script>
+    <script src="components/quote.js"></script>
+    <script src="components/info.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="js/renderer.js"></script>
+    
+    <script>
+        // 初始化状态
+        document.getElementById('status').innerHTML = 
+            '<span style="color: green;">✓ 所有模块加载成功</span><br>' +
+            'THEME: ' + (typeof THEME !== 'undefined' ? '✓' : '✗') + '<br>' +
+            'Layouts: ' + (typeof Layouts !== 'undefined' ? '✓' : '✗') + '<br>' +
+            'TitleComponent: ' + (typeof TitleComponent !== 'undefined' ? '✓' : '✗') + '<br>' +
+            'DividerComponent: ' + (typeof DividerComponent !== 'undefined' ? '✓' : '✗') + '<br>' +
+            'ImageComponent: ' + (typeof ImageComponent !== 'undefined' ? '✓' : '✗') + '<br>' +
+            'ParagraphComponent: ' + (typeof ParagraphComponent !== 'undefined' ? '✓' : '✗');
+        
+        // 渲染测试
+        if (typeof THEME !== 'undefined' && typeof Layouts !== 'undefined') {
+            const theme = THEME;
+            const layouts = Layouts;
+            
+            // 1. 标题
+            const titleHTML = TitleComponent.render('01', '【软件概览】', theme, layouts);
+            document.getElementById('title-preview').innerHTML = titleHTML;
+            document.getElementById('title-params').innerHTML = 
+                '<strong>Theme 参数:</strong><br>' +
+                '<code>fonts.chapterNumber.fontSize: ' + theme.fonts.chapterNumber.fontSize + '</code>' +
+                '<code>fonts.chapterNumber.color: ' + theme.fonts.chapterNumber.color + '</code>' +
+                '<code>fonts.subtitle.fontSize: ' + theme.fonts.subtitle.fontSize + '</code>' +
+                '<code>spacing.sectionDivider: ' + theme.spacing.sectionDivider + '</code>';
+            
+            // 2. 分隔线
+            const dividerHTML = DividerComponent.render({ type: 'triple' }, theme, layouts);
+            document.getElementById('divider-preview').innerHTML = dividerHTML;
+            document.getElementById('divider-params').innerHTML = 
+                '<strong>Theme 参数:</strong><br>' +
+                '<code>decorations.tripleLine.borderWidth: ' + theme.decorations.tripleLine.borderWidth + '</code>' +
+                '<code>decorations.tripleLine.borderColor: ' + theme.decorations.tripleLine.borderColor + '</code>' +
+                '<code>decorations.tripleDots.size: ' + theme.decorations.tripleDots.size + '</code>';
+            
+            // 3. 图片
+            const imageHTML = ImageComponent.render('示例图片', 'https://via.placeholder.com/600x200/afcfee/3e3e3e?text=DrawRu+Image', theme, layouts);
+            document.getElementById('image-preview').innerHTML = imageHTML;
+            document.getElementById('image-params').innerHTML = 
+                '<strong>Theme 参数:</strong><br>' +
+                '<code>borders.image.borderWidth: ' + theme.borders.image.borderWidth + '</code>' +
+                '<code>borders.image.borderStyle: ' + theme.borders.image.borderStyle + '</code>' +
+                '<code>borders.image.borderColor: ' + theme.borders.image.borderColor + '</code>' +
+                '<code>borders.image.borderRadius: ' + theme.borders.image.borderRadius + '</code>';
+            
+            // 4. 段落
+            const paraHTML = ParagraphComponent.render('TrafficMonitor 是一款运行在 Windows 平台上的**极简开源**实时监控工具。', theme, layouts);
+            document.getElementById('paragraph-preview').innerHTML = paraHTML;
+            document.getElementById('paragraph-params').innerHTML = 
+                '<strong>Theme 参数:</strong><br>' +
+                '<code>fonts.body.fontSize: ' + theme.fonts.body.fontSize + '</code>' +
+                '<code>fonts.body.lineHeight: ' + theme.fonts.body.lineHeight + '</code>' +
+                '<code>spacing.paragraph: ' + theme.spacing.paragraph + '</code>';
+            
+            // 5. END
+            const footerHTML = FooterComponent.render({ type: 'end' }, theme, layouts);
+            document.getElementById('footer-preview').innerHTML = footerHTML;
+            document.getElementById('footer-params').innerHTML = 
+                '<strong>Theme 参数:</strong><br>' +
+                '<code>borders.endLine.borderWidth: ' + theme.borders.endLine.borderWidth + '</code>' +
+                '<code>colors.lightBlue: ' + theme.colors.lightBlue + '</code>';
+            
+            // 完整文章
+            const renderer = new MarkdownRenderer(theme, layouts);
+            const nodes = [
+                { type: 'title', num: '01', label: '【软件概览】' },
+                { type: 'info', label: '软件名称：', value: 'TrafficMonitor' },
+                { type: 'info', label: '软件版本：', value: 'V1.86' },
+                { type: 'image', alt: '截图', src: 'https://via.placeholder.com/600x200/afcfee/3e3e3e?text=Screenshot' },
+                { type: 'title', num: '02', label: '【软件介绍】' },
+                { type: 'paragraph', text: 'TrafficMonitor 是一款运行在 Windows 平台上的**极简开源**实时监控工具。' },
+                { type: 'paragraph', text: '它主要用于在桌面上、任务栏中实时显示**网速**、CPU 利用率等关键系统信息。' }
+            ];
+            const articleHTML = renderer.renderArticle(nodes);
+            document.getElementById('preview').innerHTML = articleHTML;
+        }
+    </script>
+</body>
+</html>
