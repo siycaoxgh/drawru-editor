@@ -1,9 +1,9 @@
-# DrawRu 编辑器 — v3.7.0
+# DrawRu 编辑器 — v3.7.5
 
 DrawRu 是一个本地微信公众号 Markdown 排版工具：将 Markdown 解析为兼容微信公众号的 HTML，用户确认预览后复制发布。
-![编辑器截图](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/20260717123956351.png)
+![编辑器截图](https://example.com/20260717123956351.png)
 
-当前版本：**v3.7.0**
+当前版本：**v3.7.5**
 
 ## 当前能力
 
@@ -26,6 +26,25 @@ bash start.sh
 ```
 
 浏览器打开 `http://localhost:8080/`，选择模板填写内容，点击「应用模板」预览，确认后「复制到剪贴板」粘贴到微信公众号后台。
+
+## Electron 桌面运行
+
+Electron 入口已放在 `electron/`，只加载根目录现有的 `index.html`，不会复制或重构 `js/`、`css/`、`assets/`、`components/`、`themes/` 和 `layouts/`。
+
+```powershell
+cd electron
+npm install
+npm start
+
+# 构建 Windows 安装包
+npm run build
+```
+
+`electron/node_modules/` 已加入 `.gitignore`，不上传依赖目录。
+
+## 本地 COS 示例图片
+
+公开仓库中的示例地址使用安全占位域名。需要在本地加载自己的 COS 图片时，双击根目录的 `switch-cos-assets.bat`，选择使用 COS 地址并输入 COS 基础地址；提交到公开仓库前再次选择还原占位地址。
 
 ## 目录结构
 
@@ -160,13 +179,12 @@ Markdown 输入
 
 版本历史见 [CHANGELOG.md](CHANGELOG.md)
 部分源码测试来源[秀米编辑器](https://xiumi.us/)以及[微信公众号](https://mp.weixin.qq.com/)
-![秀米编辑器](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/20260717123904706.png)
+![秀米编辑器](https://example.com/20260717123904706.png)
 
-![微信公众号](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/20260717123933729.png)
+![微信公众号](https://example.com/20260717123933729.png)
 
 愿大家出走半生，归来仍是少年
 
 ---
 
-**DrawRu v3.7.0** · 2026-07-17
-
+**DrawRu v3.7.5** · 2026-07-17

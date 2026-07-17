@@ -1,6 +1,6 @@
 # 开发规范
 
-> DrawRu v3.7.0 · Development Guidelines
+> DrawRu v3.7.5 · Development Guidelines
 
 ## 环境要求
 

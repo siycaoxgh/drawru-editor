@@ -1,6 +1,6 @@
 # 图片资产规范
 
-> DrawRu v3.7.0 · Image Assets Specification
+> DrawRu v3.7.5 · Image Assets Specification
 
 ## 架构定位
 

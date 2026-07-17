@@ -14,6 +14,9 @@ desktop.ini
 dist/
 build/
 release/
+electron/node_modules/
+electron/dist/
+.drawru-cos-backup/
 
 # Python 缓存
 **/__pycache__/

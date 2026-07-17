@@ -452,6 +452,50 @@ body {
     border-color: #8bbbd5;
 }
 
+.about-modal[hidden] { display: none; }
+
+.about-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(24, 30, 38, 0.35);
+    z-index: 1100;
+}
+
+.about-card {
+    position: relative;
+    width: min(420px, calc(100vw - 48px));
+    padding: 32px 36px;
+    box-sizing: border-box;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #e1e5ea;
+    border-radius: 12px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+}
+
+.about-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    border: 0;
+    background: transparent;
+    color: #8a929d;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.about-logo { color: #f39a3d; font-size: 28px; }
+.about-card h2 { margin: 8px 0; color: #222; }
+.about-card p { margin: 8px 0; color: #666; line-height: 1.6; }
+.about-version { color: #333 !important; font-size: 13px; }
+.about-description { margin-top: 18px !important; font-size: 13px; }
+.about-copyright { margin-top: 20px !important; color: #999 !important; font-size: 12px; }
+.about-card a { color: #2679c9; font-size: 13px; text-decoration: none; }
+.about-card a:hover { text-decoration: underline; }
+
 /* Toast */
 .toast {
     position: fixed;

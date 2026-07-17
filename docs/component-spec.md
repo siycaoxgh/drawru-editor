@@ -1,6 +1,6 @@
 # 组件规范
 
-> DrawRu v3.7.0 · Component System Specification
+> DrawRu v3.7.5 · Component System Specification
 
 ## 组件契约
 

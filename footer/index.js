@@ -1,9 +1,9 @@
-﻿/**
- * DrawRu Footer 渲染器（浏览器版） — v3.7.0 兼容入口
+/**
+ * DrawRu Footer 渲染器（浏览器版） — v3.7.5 兼容入口
  *
  * 职责：Header 渲染（Follow 关注引导），以及为旧调用链提供兼容。
  *
- * v3.7.0 变更：
+ * v3.7.5 变更：
  * - 尾部渲染（END+Copyright+Social+Recommend+Interaction）已迁移到
  *   assets/article/footer/ Pipeline 统一编排，不再由此文件渲染。
  * - Header 关注引导（renderFollow）保持不变，仍由 renderer.js 调用。

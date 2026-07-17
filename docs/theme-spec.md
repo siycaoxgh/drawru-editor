@@ -1,6 +1,6 @@
 # 主题规范
 
-> DrawRu v3.7.0 · Theme System Specification
+> DrawRu v3.7.5 · Theme System Specification
 
 ## 主题结构
 

@@ -1,4 +1,4 @@
-# DrawRu v3.7.0 — 部署与运行指南
+# DrawRu v3.7.5 — 部署与运行指南
 
 ## 运行方式
 
@@ -132,4 +132,4 @@ Markdown 输入 → parser.js (tokenize → AST → nodes)
 
 ## 版本
 
-**DrawRu v3.7.0** — 2026-07-17 已发布
+**DrawRu v3.7.5** — 2026-07-17 已发布

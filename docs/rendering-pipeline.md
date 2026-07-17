@@ -1,6 +1,6 @@
 # 渲染链路
 
-> v3.7.0 · parser.js → enrich-image.js → renderer.js → clipboard.js
+> v3.7.5 · parser.js → enrich-image.js → renderer.js → clipboard.js
 
 ## 第一阶段：Markdown → AST（parser.js）
 

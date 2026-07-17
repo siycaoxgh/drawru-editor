@@ -1,4 +1,4 @@
-# DrawRu v3.7.0 — 图片工作流程
+# DrawRu v3.7.5 — 图片工作流程
 
 ## 当前架构
 
@@ -39,7 +39,7 @@ DrawRu 的图片系统分三层：
 asset:img_001 → ImageStore → resolve → COS URL
 ```
 
-当前 v3.7.0 中，Asset Registry 作为浏览器兼容层保留并由 `index.html` 加载，用于 `assetId → URL` 的本地解析。
+当前 v3.7.5 中，Asset Registry 作为浏览器兼容层保留并由 `index.html` 加载，用于 `assetId → URL` 的本地解析。
 它不负责图片上传、COS 管理或远程同步。
 
 ## Asset ID 规范
@@ -141,5 +141,5 @@ Markdown 图片行 → parser.js tokenize → image token
 
 ## 版本
 
-v3.7.0 — 2026-07-17 已发布
+v3.7.5 — 2026-07-17 已发布
 Asset Registry 作为浏览器兼容层保留，用于 `assetId → URL` 本地解析；不负责图片上传、COS 管理或远程同步。

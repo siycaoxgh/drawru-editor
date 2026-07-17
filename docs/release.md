@@ -1,6 +1,6 @@
 # 发布规范
 
-> DrawRu v3.7.0 · Release Guidelines
+> DrawRu v3.7.5 · Release Guidelines
 
 ## 发布流程
 
@@ -55,7 +55,7 @@ Phase N → 功能实现 → 单元测试 → 稳定性验收 → RC → 修复 
 | v3.5.5-alpha | 2026-07-10 | Dev | Markdown Parser v3 |
 | v3.5.5-beta | 2026-07-11 | RC | Phase 2-A~C 全部功能 |
 | v3.6.0-rc1 | 2026-07-17 | RC | 微信兼容、安全边界、图片比例和 Footer Pipeline 收束 |
-| v3.7.0 | 2026-07-17 | Stable | 默认文章模板视觉调整、旧兼容脚本归档和文档收尾 |
+| v3.7.5 | 2026-07-17 | Stable | 默认文章模板视觉调整、旧兼容脚本归档和文档收尾 |
 
 ## Known Limitations
 

@@ -1,0 +1,30 @@
+{
+  "name": "drawru",
+  "version": "3.7.5",
+  "productName": "DrawRu 编辑器",
+  "author": "XAOCEN STUDIO",
+  "description": "微信公众号 Markdown 排版工具",
+  "license": "MIT",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.drawru.editor",
+    "productName": "DrawRu 编辑器",
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "^26.15.3"
+  }
+}
