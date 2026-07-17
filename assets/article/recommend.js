@@ -14,12 +14,12 @@
 var DRAW_RU_RECOMMENDS = [
     {
         title: "我们分享 我们共享 我们自由",
-        image: "https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg",
+        image: "https://example.com/202210290944229.jpg",
         url: ""
     },
     {
         title: "发现更多精彩内容",
-        image: "https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg",
+        image: "https://example.com/202210290944229.jpg",
         url: ""
     },
     {

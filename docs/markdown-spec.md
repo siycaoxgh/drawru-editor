@@ -49,13 +49,13 @@
 ### 标准语法
 
 ```
-![截图](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg)
+![截图](https://example.com/202210290944229.jpg)
 ```
 
 ### 扩展属性（Phase 2-B1）
 
 ```
-![截图](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg)
+![截图](https://example.com/202210290944229.jpg)
 {width=800 height=600 align=center border=true caption="系统架构图"}
 ```
 
@@ -102,7 +102,7 @@
 版本：V1.86
 平台：Windows
 
-![截图](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg)
+![截图](https://example.com/202210290944229.jpg)
 {width=600 caption="运行界面"}
 
 ## 02 主要功能

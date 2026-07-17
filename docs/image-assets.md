@@ -40,10 +40,10 @@ registry.json 仅作为本地缓存加速 assetId 查找，不是唯一数据源
 
 ```
 // 标准 URL（永远兼容）
-![截图](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg)
+![截图](https://example.com/202210290944229.jpg)
 
 // URL + 属性块
-![截图](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg)
+![截图](https://example.com/202210290944229.jpg)
 {width=800 height=600 border=false caption="系统架构"}
 
 // Asset 协议

@@ -8,14 +8,14 @@
 
 var DRAW_RU_HEADER_IMAGES = [
     {
-        src: "https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/Windows.webp",
+        src: "https://example.com/Windows.webp",
         alt: "",
         width: "",
         height: "",
         link: ""
     },
     {
-        src: "https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/Android.webp",
+        src: "https://example.com/Android.webp",
         alt: "",
         width: "",
         height: "",

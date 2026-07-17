@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 模板引擎（浏览器版）
  * 
  * 负责生成 Markdown 框架
@@ -99,7 +99,7 @@ const TemplateEngine = {
                 const num = String(sectionNum).padStart(2, '0');
                 md += `## ${num} ${section.title}\n\n`;
             } else if (section.type === 'image') {
-                md += `\n![${section.title}](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg)\n\n`;
+                md += `\n![${section.title}](https://example.com/202210290944229.jpg)\n\n`;
             } else if (section.type === 'quote') {
                 md += `> ${section.title}\n>\n`;
             } else if (section.type === 'list') {

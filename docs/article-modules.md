@@ -26,8 +26,8 @@
 ```javascript
 // header-images.js
 var DRAW_RU_HEADER_IMAGES = [
-    { src: "https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg", alt: "", width: "800", height: "400", link: "" },
-    { src: "https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg", alt: "", width: "800", height: "400", link: "" }
+    { src: "https://example.com/202210290944229.jpg", alt: "", width: "800", height: "400", link: "" },
+    { src: "https://example.com/202210290944229.jpg", alt: "", width: "800", height: "400", link: "" }
 ];
 ```
 
@@ -56,8 +56,8 @@ var DRAW_RU_HEADER_IMAGES = [
 
 ```javascript
 var DRAW_RU_RECOMMENDS = [
-    { title: "文章标题1", image: "https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg", url: "" },
-    { title: "文章标题2", image: "https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg", url: "" },
+    { title: "文章标题1", image: "https://example.com/202210290944229.jpg", url: "" },
+    { title: "文章标题2", image: "https://example.com/202210290944229.jpg", url: "" },
     // title 和 image 都非空才渲染，最多取前 4 个
 ];
 ```
@@ -78,10 +78,10 @@ var DRAW_RU_RECOMMENDS = [
 
 ```javascript
 var DRAW_RU_ACTIONS = [
-    { type: "like",    text: "点赞", icon: "https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg" },
-    { type: "share",   text: "分享", icon: "https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg" },
-    { type: "wow",     text: "在看", icon: "https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg" },
-    { type: "comment", text: "留言", icon: "https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg" }
+    { type: "like",    text: "点赞", icon: "https://example.com/202210290944229.jpg" },
+    { type: "share",   text: "分享", icon: "https://example.com/202210290944229.jpg" },
+    { type: "wow",     text: "在看", icon: "https://example.com/202210290944229.jpg" },
+    { type: "comment", text: "留言", icon: "https://example.com/202210290944229.jpg" }
 ];
 ```
 

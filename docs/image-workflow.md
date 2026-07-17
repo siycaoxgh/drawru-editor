@@ -7,7 +7,7 @@ DrawRu 的图片系统分三层：
 ### 1. Markdown 图片（主要方式）
 
 ```markdown
-![软件截图](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202607121126570.jpg)
+![软件截图](https://example.com/202607121126570.jpg)
 ```
 
 直接在 Markdown 中使用 HTTPS URL。解析后由 `ImageComponent.renderNode()` 渲染为微信公众号兼容的 section 结构。
@@ -79,8 +79,8 @@ PicGo 配置：
     "tcyun": {
       "secretId": "",
       "secretKey": "",
-      "bucket": "image-xaocen-1303881255",
-      "region": "ap-shanghai"
+      "bucket": "your-public-bucket",
+      "region": "your-region"
     }
   }
 }
@@ -88,24 +88,24 @@ PicGo 配置：
 
 ## 腾讯云 COS 配置
 
-当前使用的存储桶：
+本公开文档不记录个人存储桶名称。请在本地 PicGo 配置中填写自己的桶信息：
 
 ```
-Bucket: image-xaocen-1303881255
-Region: ap-shanghai (华东-上海)
-访问: 公有读
-域名: https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/
+Bucket: your-public-bucket
+Region: your-region
+访问: 按个人需求配置
+域名: https://example.com/
 ```
 
 ### 目录结构
 
 ```
-cos://image-xaocen-1303881255/
-├── 202210290944229.jpg      # 历史图片
-├── 20260712112657075.jpg    # 公众号二维码
-├── 20260712112551015.jpg    # 小红书
-├── 20260712112642008.jpg    # 抖音
-├── 20260712112626560.jpg    # 哔哩哔哩
+cos://your-public-bucket/
+├── path/to/article-image.jpg
+├── footer/official-account.png
+├── footer/xiaohongshu.png
+├── footer/douyin.png
+├── footer/bilibili.png
 ├── Windows.webp             # Windows 平台图
 └── Android.webp             # Android 平台图
 ```

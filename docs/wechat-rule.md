@@ -1,4 +1,4 @@
-﻿# 微信公众号 HTML 兼容规则
+# 微信公众号 HTML 兼容规则
 
 本文档记录 DrawRu 编辑器在生成微信公众号兼容 HTML 时遵循的规则。
 
@@ -132,7 +132,7 @@ const ASSETS = {
 
 **格式：**
 ```html
-<img src="https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/202210290944229.jpg" alt="描述" />
+<img src="https://example.com/202210290944229.jpg" alt="描述" />
 ```
 
 ## 4. 富文本复制规则

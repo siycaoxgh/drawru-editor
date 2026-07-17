@@ -113,7 +113,7 @@ Markdown 输入
 | 图片属性 | `![alt](url)` 下行 `{width=800 caption="..."}` | 可选尺寸/对齐/标题 |
 | Asset 协议 | `![alt](asset:img_001)` | Asset Registry 解析 → COS URL（experimental） |
 
-图片必须使用 HTTPS 外链。COS 存储桶：`image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com`
+图片必须使用 HTTPS 外链。公开仓库只使用示例图片 URL；真实 COS 地址请在本地配置或编辑器表单中填写，不要提交到公开仓库。
 
 ## 微信兼容要点
 
@@ -136,7 +136,7 @@ Markdown 输入
 - 明确 Bug 修复
 - 安全修复（XSS、注入等）
 - 微信公众号兼容修复
-- 所有修改必须记录到 [CHANGELOG.md](C:\Users\TOM\.qclaw-hermes\scripts\wechat-drawru\drawru-editor\CHANGELOG.md)
+- 所有修改必须记录到 [CHANGELOG.md](CHANGELOG.md)
 
 **禁止**：
 - 重构核心逻辑
@@ -156,9 +156,9 @@ Markdown 输入
 
 ## 相关文档
 
-详细规范见 `docs/` 目录：[v3.7 发布说明](C:\Users\TOM\.qclaw-hermes\scripts\wechat-drawru\drawru-editor\docs\v3.7-release-notes.md) | [部署指南](C:\Users\TOM\.qclaw-hermes\scripts\wechat-drawru\drawru-editor\docs\deployment.md) | [图片流程](C:\Users\TOM\.qclaw-hermes\scripts\wechat-drawru\drawru-editor\docs\image-workflow.md) | [架构总览](C:\Users\TOM\.qclaw-hermes\scripts\wechat-drawru\drawru-editor\docs\overview.md) | [渲染链路](C:\Users\TOM\.qclaw-hermes\scripts\wechat-drawru\drawru-editor\docs\rendering-pipeline.md)
+详细规范见 `docs/` 目录：[v3.7 发布说明](docs/v3.7-release-notes.md) | [部署指南](docs/deployment.md) | [图片流程](docs/image-workflow.md) | [架构总览](docs/overview.md) | [渲染链路](docs/rendering-pipeline.md)
 
-版本历史见 [CHANGELOG.md](C:\Users\TOM\.qclaw-hermes\scripts\wechat-drawru\drawru-editor\CHANGELOG.md)
+版本历史见 [CHANGELOG.md](CHANGELOG.md)
 
 ---
 
