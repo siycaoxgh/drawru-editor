@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrawRu 编辑器</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <div class="logo-icon">✦</div>
+            <span>DrawRu 编辑器</span>
+        </div>
+        <div class="top-actions">
+            <button class="btn btn-white" id="clearBtn">🗑 清空</button>
+            <button class="btn btn-primary" id="applyBtn">✨ 应用模板</button>
+            <button class="btn btn-copy" id="copyBtn" type="button">📋 复制到公众号</button>
+        </div>
+    </div>
+    
+    <div class="main">
+        <!-- 左侧：模板选择 + 文章配置面板 -->
+        <div class="column col-form">
+            <div class="column-header">
+                <div class="column-title">
+                    <div class="column-icon icon-form">🎨</div>
+                    排版设置
+                </div>
+            </div>
+            <div class="form-area" id="form-area">
+                <!-- 模板选择 -->
+                <div class="template-section">
+                    <div class="form-section-title">📑 排版模板</div>
+                    <div class="template-grid" id="template-grid">
+                        <!-- 由 app.js 动态生成 -->
+                    </div>
+                </div>
+                <!-- 文章配置面板 -->
+                <div id="form-container"></div>
+            </div>
+        </div>
+        
+        <!-- 中间：Markdown 编辑区 -->
+        <div class="column col-input" id="md-panel">
+            <div class="column-header">
+                <div class="column-title">
+                    <div class="column-icon icon-input">📝</div>
+                    Markdown 源码
+                </div>
+            </div>
+            <div class="input-area">
+                <textarea id="editor" placeholder="在这里输入内容..."></textarea>
+            </div>
+        </div>
+        
+        <!-- 右侧：预览 -->
+        <div class="column col-preview">
+            <div class="column-header">
+                <div class="column-title">
+                    <div class="column-icon icon-preview">📫</div>
+                    微信预览
+                </div>
+            </div>
+            <div class="preview-frame">
+                <div class="phone-mockup">
+                    <div class="phone-content" id="preview">
+                        <p style="color: #999; text-align: center; padding: 60px 0;">
+                            选择模板并填写内容后<br>点击「应用模板」查看效果
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="toast" id="toast"></div>
+
+    <!-- 脚本加载顺序很重要 -->
+    <!-- 1. 资源数据（必须在主题之前加载） -->
+    <script src="assets/footer/socials.js"></script>
+    
+    <!-- 2. 主题（必须先加载，才能被 ThemeManager 收集） -->
+    <script src="themes/default.js"></script>
+    <script src="themes/software.js"></script>
+    
+    <!-- 3. 主题管理器（收集所有主题） -->
+    <script src="js/theme-manager.js"></script>
+    
+    <!-- 4. SVG 资源库 -->
+    <script src="components/assets.js"></script>
+    
+    <!-- 5. Footer 渲染器（浏览器版） -->
+    <script src="footer/index.js"></script>
+    
+    <!-- 6. 组件 -->
+    <script src="components/title.js"></script>
+    <script src="components/paragraph.js"></script>
+    <script src="components/image.js"></script>
+    <script src="components/quote.js"></script>
+    <script src="components/info.js"></script>
+    <script src="components/divider.js"></script>
+    <script src="components/footer.js"></script>
+    
+    <!-- 6.5. 文章模板模块 -->
+    <script src="assets/article/header-images.js"></script>
+    <script src="assets/article/header-images-renderer.js"></script>
+    <script src="assets/article/recommend.js"></script>
+    
+    <!-- 6.6. Footer Pipeline v3.7.0（固定顺序编排，子模块先于入口加载） -->
+    <script src="assets/article/footer/end.js"></script>
+    <script src="assets/article/footer/copyright.js"></script>
+    <script src="assets/article/footer/recommend.js"></script>
+    <script src="assets/article/footer/social.js"></script>
+    <script src="assets/article/footer/interaction.js"></script>
+    <script src="assets/article/footer/index.js"></script>
+    
+    <!-- 7. 核心模块（浏览器版，无 Node.js 依赖） -->
+    <script src="layouts/core.js"></script>
+    <script src="js/clipboard.js"></script>
+    <script src="js/parser.js"></script>
+    
+    <!-- 7.1. Asset Registry 浏览器版（Phase 2-C.1, 在 enrich-image 之前加载） -->
+    <script src="assets/images/store.js"></script>
+    <script src="assets/images/validator.js"></script>
+    <script src="assets/images/resolver.js"></script>
+    <script src="assets/images/importers/picgo.js"></script>
+    <script src="assets/images/index.js"></script>
+    
+    <script src="js/enrich-image.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/template-browser.js"></script>
+    <script src="js/form-browser.js"></script>
+    
+    <!-- 8. 主应用 -->
+    <script src="js/app.js"></script>
+</body>
+</html>
