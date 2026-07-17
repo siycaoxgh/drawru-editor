@@ -110,7 +110,7 @@
 - 所有 section 强制 `background: transparent`
 - 图片 `display: block` 消除底部间隙
 - SVG Data URI 内联
-- 秀米 HTML 结构对齐
+- HTML 结构对齐
 
 ### Footer 资源管理
 - Footer 渲染器浏览器版（无 Node.js 依赖）
@@ -167,5 +167,5 @@
 ## v3.5 (摘要)
 
 - 初始组件化架构
-- 参考秀米 TrafficMonitor 文章精确参数
+- 参考公众号文章精确参数
 - 微信公众号排版规则验证

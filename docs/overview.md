@@ -43,8 +43,7 @@ drawru-editor/
 │       ├── registry.json       # 持久化缓存
 │       └── importers/picgo.js  # PicGo 输出格式转换（一次性工具）
 ├── docs/                       # 本文档集
-├── archive/                    # 历史版本与测试/验证脚本
-└── archive/                    # 历史版本（v3.5，不参与加载）
+└── archive/                    # 历史版本与测试/验证脚本（单独的仓库）
 ```
 
 ## 核心数据流

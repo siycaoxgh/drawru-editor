@@ -7,7 +7,7 @@ DrawRu 的图片系统分三层：
 ### 1. Markdown 图片（主要方式）
 
 ```markdown
-![软件截图](https://example.com/202607121126570.jpg)
+![图片](https://example.com/202607121126570.jpg)
 ```
 
 直接在 Markdown 中使用 HTTPS URL。解析后由 `ImageComponent.renderNode()` 渲染为微信公众号兼容的 section 结构。
@@ -17,8 +17,8 @@ DrawRu 的图片系统分三层：
 在图片行下方添加属性块（Phase 2-B1）：
 
 ```markdown
-![截图](https://example.com/img.png)
-{width=800 height=600 caption="软件主窗口" align=center}
+![图片](https://example.com/img.png)
+{width=800 height=600 caption="图片信息" align=center}
 ```
 
 支持字段：
@@ -133,7 +133,7 @@ Markdown 图片行 → parser.js tokenize → image token
 ## 微信兼容要点
 
 - 图片必须使用 `display: block`（避免底部间隙）
-- 边框使用 `border-style: dotted`（秀米风格）
+- 边框使用 `border-style: dotted`（个人风格）
 - 所有容器显式设置 `background: transparent`
 - 图片 URL 必须是 HTTPS
 - 不建议使用 SVG 直接作为内容图（微信过滤 `<svg>` 标签）

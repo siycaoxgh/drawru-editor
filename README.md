@@ -1,6 +1,7 @@
 # DrawRu 编辑器 — v3.7.0
 
 DrawRu 是一个本地微信公众号 Markdown 排版工具：将 Markdown 解析为兼容微信公众号的 HTML，用户确认预览后复制发布。
+![编辑器截图](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/20260717123956351.png)
 
 当前版本：**v3.7.0**
 
@@ -73,16 +74,15 @@ drawru-editor/
 │       └── recommend.*         #     推荐文章
 │
 ├── css/style.css              # 编辑器界面样式
-├── docs/                      # 规范文档
-│   ├── deployment.md          #   部署运行指南
-│   ├── image-workflow.md      #   PicGo / COS / 图片渲染链路
-│   ├── overview.md            #   架构总览
-│   ├── markdown-spec.md       #   Markdown 语法规范
-│   ├── rendering-pipeline.md  #   渲染链路
-│   └── ...                    #   组件/主题/资源等规范
 │
-└── reference/                    # 秀米参考文件（archive 不上传正式仓库）
-    └── xiumi-original.html       # 秀米参考 HTML
+└── docs/                      # 规范文档
+    ├── deployment.md          #   部署运行指南
+    ├── image-workflow.md      #   PicGo / COS / 图片渲染链路
+    ├── overview.md            #   架构总览
+    ├── markdown-spec.md       #   Markdown 语法规范
+    ├── rendering-pipeline.md  #   渲染链路
+    └── ...                    #   组件/主题/资源等规范
+
 ```
 
 ## 渲染数据流
@@ -159,7 +159,14 @@ Markdown 输入
 详细规范见 `docs/` 目录：[v3.7 发布说明](docs/v3.7-release-notes.md) | [部署指南](docs/deployment.md) | [图片流程](docs/image-workflow.md) | [架构总览](docs/overview.md) | [渲染链路](docs/rendering-pipeline.md)
 
 版本历史见 [CHANGELOG.md](CHANGELOG.md)
+部分源码测试来源[秀米编辑器](https://xiumi.us/)以及[微信公众号](https://mp.weixin.qq.com/)
+![秀米编辑器](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/20260717123904706.png)
+
+![微信公众号](https://image-xaocen-1303881255.cos.ap-shanghai.myqcloud.com/20260717123933729.png)
+
+愿大家出走半生，归来仍是少年
 
 ---
 
 **DrawRu v3.7.0** · 2026-07-17
+

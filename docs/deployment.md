@@ -87,12 +87,7 @@ drawru-editor/
 │   ├── wechat-rule.md         #   微信公众号排版规则
 │   └── reports/               #   代码审查报告存档
 │
-├── archive/v3.5.5.bate-history/ # 已归档的测试/验证脚本
-├── reference/                 # 参考素材
-│   └── xiumi-original.html    #   秀米原始 HTML
-└── archive/                   # 历史版本代码
-    ├── v3.5-history/
-    └── v3.5.5-history/
+└── archive/                   # 已归档的测试/验证脚本（单独仓库）
 ```
 
 ## 数据流
@@ -119,7 +114,6 @@ Markdown 输入 → parser.js (tokenize → AST → nodes)
 ### 注意事项
 
 - 粘贴时确保使用 Ctrl+V（不要用右键菜单），以保留 HTML 富文本格式
-- 秀米编辑器的原生复制行为与 DrawRu 兼容，使用相同的 iframe + execCommand 方案
 - 背景透明是微信的要求，所有 section 元素均强制 `background: transparent`
 - 图片需使用 HTTPS 外链（已上传至 COS 的 URL）
 
