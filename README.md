@@ -1,7 +1,7 @@
 # DrawRu 编辑器 — v3.7.5
 
 DrawRu 是一个本地微信公众号 Markdown 排版工具：将 Markdown 解析为兼容微信公众号的 HTML，用户确认预览后复制发布。
-![编辑器截图](https://example.com/20260717123956351.png)
+![编辑器截图](https://github.com/siycaoxgh/image/blob/main/markdown-drawru/%E7%BC%96%E8%AF%91%E5%99%A8%E9%A1%B5%E9%9D%A2.png)
 
 当前版本：**v3.7.5**
 
@@ -179,9 +179,9 @@ Markdown 输入
 
 版本历史见 [CHANGELOG.md](CHANGELOG.md)
 部分源码测试来源[秀米编辑器](https://xiumi.us/)以及[微信公众号](https://mp.weixin.qq.com/)
-![秀米编辑器](https://example.com/20260717123904706.png)
+![秀米编辑器](https://github.com/siycaoxgh/image/blob/main/markdown-drawru/%E7%A7%80%E7%B1%B3%E7%BC%96%E8%BE%91%E5%99%A8.png)
 
-![微信公众号](https://example.com/20260717123933729.png)
+![微信公众号](https://github.com/siycaoxgh/image/blob/main/markdown-drawru/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7.png)
 
 愿大家出走半生，归来仍是少年
 
